@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div>
         <div class="card">
             <h3>Icons</h3>
@@ -143,4 +143,4 @@ export default {
         color: var(--text-color-secondary);
     }
 }
-</style>
+</style> -->
