@@ -69,7 +69,7 @@ export default {
             {
               label: "Purchase Order",
               icon: "pi pi-fw pi-id-card",
-              to: "/order_details",
+              to: "/purchase_order",
             },
             { label: "Input", icon: "pi pi-fw pi-check-square", to: "/input" },
             {
@@ -113,18 +113,18 @@ export default {
             },
           ],
         },
-        {
-          label: "Utilities",
-          items: [
-            { label: "PrimeIcons", icon: "pi pi-fw pi-prime", to: "/icons" },
-            {
-              label: "PrimeFlex",
-              icon: "pi pi-fw pi-desktop",
-              url: "https://www.primefaces.org/primeflex/",
-              target: "_blank",
-            },
-          ],
-        },
+        // {
+        //   label: "Utilities",
+        //   items: [
+        //     { label: "PrimeIcons", icon: "pi pi-fw pi-prime", to: "/icons" },
+        //     {
+        //       label: "PrimeFlex",
+        //       icon: "pi pi-fw pi-desktop",
+        //       url: "https://www.primefaces.org/primeflex/",
+        //       target: "_blank",
+        //     },
+        //   ],
+        // },
         {
           label: "Pages",
           icon: "pi pi-fw pi-clone",

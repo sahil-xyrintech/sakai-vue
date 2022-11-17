@@ -23,6 +23,11 @@ const routes = [
         component: () => import("./components/OrderDetails.vue"),
       },
       {
+        path: "/purchase_order",
+        name: "purchase_order",
+        component: () => import("./components/PurchaseOrder.vue"),
+      },
+      {
         path: "/formlayout",
         name: "formlayout",
         component: () => import("./components/FormLayoutDemo.vue"),
@@ -144,11 +149,11 @@ const routes = [
         name: "blocks",
         component: () => import("./components/BlocksDemo.vue"),
       },
-      {
-        path: "/icons",
-        name: "icons",
-        component: () => import("./components/IconsDemo.vue"),
-      },
+      // {
+      //   path: "/icons",
+      //   name: "icons",
+      //   component: () => import("./components/IconsDemo.vue"),
+      // },
     ],
   },
   {
