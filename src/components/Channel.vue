@@ -1,6 +1,6 @@
 <template>
   <div class="grid h-full">
-    <!-- <div class="col-3">
+    <!-- <div class="col-12 md:col-3">
       <div class="card p-fluid">
         <h5>Connect Accounts</h5>
         <div class="mx-2">
@@ -42,7 +42,7 @@
     </div> -->
     <div class="col-12">
       <div class="grid">
-        <div class="col-4">
+        <div class="col-12 md:col-3">
           <div class="card p-fluid m-auto flex flex-column align-items-center">
             <h5 class="text-center">Connect Amazon Account</h5>
             <img class="w-2 my-3" src="\images\img\amazon.png" alt="" />
@@ -52,7 +52,7 @@
             />
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-12 md:col-3">
           <div class="card p-fluid m-auto flex flex-column align-items-center">
             <h5 class="text-center">Connect Seller Cloud</h5>
             <img class="w-2 my-3" src="\images\img\cloud.png" alt="" />
@@ -62,7 +62,7 @@
             />
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-12 md:col-3">
           <div class="card p-fluid m-auto flex flex-column align-items-center">
             <h5 class="text-center">Connect Shopify</h5>
             <img class="w-2 my-3" src="\images\img\shopify.png" alt="" />
@@ -72,23 +72,43 @@
             />
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-12 md:col-3">
           <div class="card p-fluid m-auto flex flex-column align-items-center">
-            <h5 class="text-center">Connect Shopify</h5>
-            <img class="w-2 my-3" src="\images\img\shopify.png" alt="" />
+            <h5 class="text-center">Connect Myntra</h5>
+            <img class="w-2 my-3" src="\images\img\myntra.png" alt="" />
             <Button
-              label="Connect Shopify Account"
+              label="Connect Myntra Account"
               class="p-button-info mr-2 my-2"
             />
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-12 md:col-3">
           <div class="card p-fluid m-auto flex flex-column align-items-center">
-            <h5 class="text-center">Connect Seller Cloud</h5>
-            <img class="w-2 my-3" src="\images\img\cloud.png" alt="" />
+            <h5 class="text-center">Connect Paytm</h5>
+            <img class="w-3" src="\images\img\paytm.png" alt="" />
             <Button
-              label="Connect Seller Cloud Account"
+              label="Connect Paytm Account"
               class="p-button-info mr-2 my-2"
+            />
+          </div>
+        </div>
+        <div class="col-12 md:col-3">
+          <div class="card p-fluid m-auto flex flex-column align-items-center">
+            <h5 class="text-center">Connect ebay</h5>
+            <img class="w-3" src="\images\img\ebay.png" alt="" />
+            <Button
+              label="Connect ebay Account"
+              class="p-button-info mr-2 my-2"
+            />
+          </div>
+        </div>
+        <div class="col-12 md:col-3">
+          <div class="card p-fluid m-auto flex flex-column align-items-center">
+            <h5 class="text-center">Connect Snapdeal</h5>
+            <img class="w-2 mt-2 mb-3" src="\images\img\snapdeal.png" alt="" />
+            <Button
+              label="Connect Snapdeal Account"
+              class="p-button-info mr-2 mb-2 mt-3"
             />
           </div>
         </div>
