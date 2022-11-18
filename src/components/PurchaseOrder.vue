@@ -1,11 +1,8 @@
 <template>
   <ContentPage>
-    <div
-      class="border-round-md bg-white border-200 shadow-1 border-1 p-3 w-10 mx-auto"
-    >
-      <div class="">
-        <h1 class="text-center">Purchase Order</h1>
-      </div>
+    <div class="card w-10 mx-auto">
+      <h1 class="text-center">Purchase Order</h1>
+
       <div class="flex justify-content-between gap-4 mt-5 mr-5">
         <div class="w-5 grid gap-y-4">
           <Button class="w-6 btn-custom">Purchase Order No.</Button
@@ -42,130 +39,134 @@
         </div>
       </div>
 
-      <div class="flex gap-4 my-5">
-        <div class="w-6 px-4 pb-4 bg-cyan-50 border-round-xl shadow-1">
-          <h2 class="mt-4">Order By</h2>
-          <div
-            class="border-1 p-3 border-500 border-round-md bg-white flex flex-column gap-4"
-          >
-            <Dropdown
-              class="text-sm mt-3 w-full"
-              v-model="selectcountry"
-              :options="country"
-              optionLabel="name"
-              optionValue="code"
-              placeholder="Select a Country"
-            />
-            <InputText
-              class="input-custom w-full"
-              placeholder="Your Bussiness/ Freelancer Name (Required)"
-              required
-            />
-            <InputText
-              class="input-custom w-full"
-              placeholder="Address (Optional)"
-            />
-            <div class="flex gap-1">
-              <InputText
-                class="input-custom w-6"
-                placeholder="City (Optional)"
+      <div class="grid">
+        <div class="col-6">
+          <div class="card bg-cyan-50">
+            <h3 class="">Order By</h3>
+            <div
+              class="border-1 p-3 border-200 border-round-md bg-white flex flex-column gap-4"
+            >
+              <Dropdown
+                class="text-sm mt-3 w-full input-custom"
+                v-model="selectcountry"
+                :options="country"
+                optionLabel="name"
+                optionValue="code"
+                placeholder="Select a Country"
               />
               <InputText
-                class="input-custom w-6"
-                placeholder="Postal Code/ Zip Code"
+                class="input-custom w-full"
+                placeholder="Your Bussiness/ Freelancer Name (Required)"
                 required
               />
-            </div>
-            <InputText
-              class="input-custom w-full"
-              placeholder="State (Optional)"
-            />
-            <div class="">
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Email"
-                icon="pi pi-envelope"
+              <InputText
+                class="input-custom w-full"
+                placeholder="Address (Optional)"
               />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Phone Number"
-                icon="pi pi-phone"
+              <div class="flex gap-1">
+                <InputText
+                  class="input-custom w-6"
+                  placeholder="City (Optional)"
+                />
+                <InputText
+                  class="input-custom w-6"
+                  placeholder="Postal Code/ Zip Code"
+                  required
+                />
+              </div>
+              <InputText
+                class="input-custom w-full"
+                placeholder="State (Optional)"
               />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add GST"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add PAN"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add more fields"
-                icon="pi pi-plus"
-              />
+              <div class="">
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 font-normal hover:text-gray-800 border-none border-noround outline-none btn-icon"
+                  label="Add Email"
+                  icon="pi pi-envelope"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add Phone Number"
+                  icon="pi pi-phone"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add GST"
+                  icon="pi pi-plus"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add PAN"
+                  icon="pi pi-plus"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add more fields"
+                  icon="pi pi-plus"
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div class="w-6 px-4 pb-4 bg-cyan-50 border-round-xl shadow-1">
-          <h2 class="mt-4">Order To</h2>
-          <div
-            class="border-1 p-3 border-500 border-round-md bg-white flex flex-column gap-4"
-          >
-            <CountryDropdown />
+        <div class="col-6">
+          <div class="card bg-cyan-50">
+            <h3 class="">Order To</h3>
+            <div
+              class="border-1 p-3 border-200 border-round-md bg-white flex flex-column gap-4"
+            >
+              <CountryDropdown />
 
-            <InputText
-              class="input-custom w-full"
-              placeholder="Your Bussiness/ Freelancer Name (Required)"
-              required
-            />
-            <InputText
-              class="input-custom w-full"
-              placeholder="Address (Optional)"
-            />
-            <div class="flex gap-1">
               <InputText
-                class="input-custom w-6"
-                placeholder="City (Optional)"
-              />
-              <InputText
-                class="input-custom w-6"
-                placeholder="Postal Code/ Zip Code"
+                class="input-custom w-full"
+                placeholder="Your Bussiness/ Freelancer Name (Required)"
                 required
               />
-            </div>
-            <InputText
-              class="input-custom w-full"
-              placeholder="State (Optional)"
-            />
-            <div class="">
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Email"
-                icon="pi pi-envelope"
+              <InputText
+                class="input-custom w-full"
+                placeholder="Address (Optional)"
               />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Phone Number"
-                icon="pi pi-phone"
+              <div class="flex gap-1">
+                <InputText
+                  class="input-custom w-6"
+                  placeholder="City (Optional)"
+                />
+                <InputText
+                  class="input-custom w-6"
+                  placeholder="Postal Code/ Zip Code"
+                  required
+                />
+              </div>
+              <InputText
+                class="input-custom w-full"
+                placeholder="State (Optional)"
               />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add GST"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add PAN"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add more fields"
-                icon="pi pi-plus"
-              />
+              <div class="">
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add Email"
+                  icon="pi pi-envelope"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add Phone Number"
+                  icon="pi pi-phone"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add GST"
+                  icon="pi pi-plus"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add PAN"
+                  icon="pi pi-plus"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add more fields"
+                  icon="pi pi-plus"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -175,192 +176,134 @@
         <CheckboxInput label="Add Shipping Details" />
       </div>
 
-      <div class="flex gap-4 my-5">
-        <div class="w-6 px-4 pb-4 bg-cyan-50 border-round-xl shadow-1">
-          <h2 class="mt-4">Shipped From</h2>
-          <div
-            class="border-1 p-3 border-500 border-round-md bg-white flex flex-column gap-4"
-          >
-            <Dropdown
-              class="text-sm mt-3 w-full"
-              v-model="selectcountry"
-              :options="country"
-              optionLabel="name"
-              optionValue="code"
-              placeholder="Select a Country"
-            />
-            <InputText
-              class="input-custom w-full"
-              placeholder="Your Bussiness/ Freelancer Name (Required)"
-              required
-            />
-            <InputText
-              class="input-custom w-full"
-              placeholder="Address (Optional)"
-            />
-            <div class="flex gap-1">
-              <InputText
-                class="input-custom w-6"
-                placeholder="City (Optional)"
+      <div class="grid">
+        <div class="col-6">
+          <div class="card bg-cyan-50">
+            <h3 class="">Shipped From</h3>
+            <div
+              class="border-1 p-3 border-200 border-round-md bg-white flex flex-column gap-4"
+            >
+              <Dropdown
+                class="text-sm mt-3 w-full input-custom"
+                v-model="selectcountry"
+                :options="country"
+                optionLabel="name"
+                optionValue="code"
+                placeholder="Select a Country"
               />
               <InputText
-                class="input-custom w-6"
-                placeholder="Postal Code/ Zip Code"
+                class="input-custom w-full"
+                placeholder="Your Bussiness/ Freelancer Name (Required)"
                 required
               />
-            </div>
-            <InputText
-              class="input-custom w-full"
-              placeholder="State (Optional)"
-            />
-            <div class="">
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Email"
-                icon="pi pi-envelope"
+              <InputText
+                class="input-custom w-full"
+                placeholder="Address (Optional)"
               />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Phone Number"
-                icon="pi pi-phone"
+              <div class="flex gap-1">
+                <InputText
+                  class="input-custom w-6"
+                  placeholder="City (Optional)"
+                />
+                <InputText
+                  class="input-custom w-6"
+                  placeholder="Postal Code/ Zip Code"
+                  required
+                />
+              </div>
+              <InputText
+                class="input-custom w-full"
+                placeholder="State (Optional)"
               />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add GST"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add PAN"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add more fields"
-                icon="pi pi-plus"
-              />
+              <div class="">
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 font-normal hover:text-gray-800 border-none border-noround outline-none btn-icon"
+                  label="Add Email"
+                  icon="pi pi-envelope"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add Phone Number"
+                  icon="pi pi-phone"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add GST"
+                  icon="pi pi-plus"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add PAN"
+                  icon="pi pi-plus"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add more fields"
+                  icon="pi pi-plus"
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div class="w-6 px-4 pb-4 bg-cyan-50 border-round-xl shadow-1">
-          <h2 class="mt-4">Shipped by</h2>
-          <div
-            class="border-1 p-3 border-500 border-round-md bg-white flex flex-column gap-4"
-          >
-            <CountryDropdown />
+        <div class="col-6">
+          <div class="card bg-cyan-50">
+            <h3 class="">Shipped By</h3>
+            <div
+              class="border-1 p-3 border-200 border-round-md bg-white flex flex-column gap-4"
+            >
+              <CountryDropdown />
 
-            <InputText
-              class="input-custom w-full"
-              placeholder="Your Bussiness/ Freelancer Name (Required)"
-              required
-            />
-            <InputText
-              class="input-custom w-full"
-              placeholder="Address (Optional)"
-            />
-            <div class="flex gap-1">
               <InputText
-                class="input-custom w-6"
-                placeholder="City (Optional)"
-              />
-              <InputText
-                class="input-custom w-6"
-                placeholder="Postal Code/ Zip Code"
+                class="input-custom w-full"
+                placeholder="Your Bussiness/ Freelancer Name (Required)"
                 required
               />
-            </div>
-            <InputText
-              class="input-custom w-full"
-              placeholder="State (Optional)"
-            />
-            <div class="">
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Email"
-                icon="pi pi-envelope"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Phone Number"
-                icon="pi pi-phone"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add GST"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add PAN"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add more fields"
-                icon="pi pi-plus"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex gap-4 my-5">
-        <div class="w-6 px-4 pb-4 bg-cyan-50 border-round-xl shadow-1">
-          <h2 class="mt-4">Shipped by</h2>
-          <div
-            class="border-1 p-3 border-500 border-round-md bg-white flex flex-column gap-4"
-          >
-            <CountryDropdown />
-
-            <InputText
-              class="input-custom w-full"
-              placeholder="Your Bussiness/ Freelancer Name (Required)"
-              required
-            />
-            <InputText
-              class="input-custom w-full"
-              placeholder="Address (Optional)"
-            />
-            <div class="flex gap-1">
               <InputText
-                class="input-custom w-6"
-                placeholder="City (Optional)"
+                class="input-custom w-full"
+                placeholder="Address (Optional)"
               />
+              <div class="flex gap-1">
+                <InputText
+                  class="input-custom w-6"
+                  placeholder="City (Optional)"
+                />
+                <InputText
+                  class="input-custom w-6"
+                  placeholder="Postal Code/ Zip Code"
+                  required
+                />
+              </div>
               <InputText
-                class="input-custom w-6"
-                placeholder="Postal Code/ Zip Code"
-                required
+                class="input-custom w-full"
+                placeholder="State (Optional)"
               />
-            </div>
-            <InputText
-              class="input-custom w-full"
-              placeholder="State (Optional)"
-            />
-            <div class="">
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Email"
-                icon="pi pi-envelope"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add Phone Number"
-                icon="pi pi-phone"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add GST"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add PAN"
-                icon="pi pi-plus"
-              />
-              <Button
-                class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
-                label="Add more fields"
-                icon="pi pi-plus"
-              />
+              <div class="">
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add Email"
+                  icon="pi pi-envelope"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add Phone Number"
+                  icon="pi pi-phone"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add GST"
+                  icon="pi pi-plus"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add PAN"
+                  icon="pi pi-plus"
+                />
+                <Button
+                  class="bg-transparent py-2 px-4 text-gray-700 hover:text-gray-900 border-none border-noround outline-none btn-icon"
+                  label="Add more fields"
+                  icon="pi pi-plus"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -402,14 +345,14 @@ import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   components: {},
-  props: {
-    datatableConfig: {
-      type: Object,
-      required: true,
-    },
-  },
-  setup(props) {
-    let today = new Date();
+  // props: {
+  //   datatableConfig: {
+  //     type: Object,
+  //     required: true,
+  //   },
+  // },
+  setup() {
+    // let today = new Date();
     const date = ref();
     const selectcountry = ref();
     const displayBasic = ref(false);
@@ -421,9 +364,9 @@ export default defineComponent({
       displayBasic.value = false;
     };
     const position = ref("center");
-    const data = {
-      isDeleteModalOpen: ref(false),
-    };
+    // const data = {
+    //   isDeleteModalOpen: ref(false),
+    // };
     const responsiveOptions = ref([
       {
         breakpoint: "1400px",

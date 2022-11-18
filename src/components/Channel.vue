@@ -1,6 +1,6 @@
 <template>
   <div class="grid h-full">
-    <div class="col-3">
+    <!-- <div class="col-3">
       <div class="card p-fluid">
         <h5>Connect Accounts</h5>
         <div class="mx-2">
@@ -39,7 +39,7 @@
           class="p-button-info mr-2 my-2"
         />
       </div>
-    </div>
+    </div> -->
     <div class="col-12">
       <div class="grid">
         <div class="col-4">
