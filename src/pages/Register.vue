@@ -41,10 +41,8 @@
               height="50"
               class="mb-3"
             />
-            <div class="text-900 text-3xl font-medium mb-3">
-              Welcome, Isabel!
-            </div>
-            <span class="text-600 font-medium">Sign in to continue</span>
+            <div class="text-900 text-3xl font-medium mb-3">Welcome!</div>
+            <span class="text-600 font-medium">Enter your details</span>
           </div>
 
           <div class="w-full md:w-10 mx-auto">
@@ -74,30 +72,39 @@
               inputClass="w-full"
               inputStyle="padding:0.7rem"
             ></Password>
+            <label
+              for="password1"
+              class="block text-900 font-medium text-xl mb-2"
+              >Confirm Password</label
+            >
+            <Password
+              id="password1"
+              v-model="password"
+              placeholder="Confirm Password"
+              :toggleMask="true"
+              class="w-full mb-3"
+              inputClass="w-full"
+              inputStyle="padding:0.7rem"
+            ></Password>
+            <label for="phone" class="block text-900 text-xl font-medium mb-2"
+              >Phone</label
+            >
+            <InputText
+              id="phone"
+              v-model="phon"
+              type="text"
+              class="w-full mb-3"
+              placeholder="Phone Number"
+              style="padding: 0.7rem"
+            />
 
-            <div class="flex align-items-center justify-content-between mb-4">
-              <div class="flex align-items-center">
-                <Checkbox
-                  id="rememberme1"
-                  v-model="checked"
-                  :binary="true"
-                  class="mr-2"
-                ></Checkbox>
-                <label for="rememberme1">Remember me</label>
-              </div>
-              <a
-                class="font-medium no-underline ml-2 text-right cursor-pointer"
-                style="color: var(--primary-color)"
-                >Forgot password?</a
-              >
-            </div>
             <Button
-              label="Sign In"
-              class="w-full text-base"
+              label="Register"
+              class="w-full text-base mt-3"
               style="padding: 0.7rem"
             ></Button>
             <Button
-              label="Register"
+              label="Back To Login"
               class="w-full text-base mt-3 p-button-secondary p-button-outlined"
               style="padding: 0.7rem"
             ></Button>

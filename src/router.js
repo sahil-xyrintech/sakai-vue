@@ -13,6 +13,11 @@ const routes = [
         component: () => import("./components/Dashboard.vue"),
       },
       {
+        path: "/calender",
+        name: "calender",
+        component: () => import("./components/Calender.vue"),
+      },
+      {
         path: "/channel",
         name: "channel",
         component: () => import("./components/Channel.vue"),
@@ -160,6 +165,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: () => import("./pages/Login.vue"),
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: () => import("./pages/Register.vue"),
   },
   {
     path: "/landing",

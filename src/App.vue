@@ -45,6 +45,11 @@ export default {
               icon: "pi pi-fw pi-home",
               to: "/",
             },
+            {
+              label: "Calender",
+              icon: "pi pi-fw pi-calendar",
+              to: "/calender",
+            },
           ],
         },
         {
@@ -137,6 +142,11 @@ export default {
             },
             { label: "Landing", icon: "pi pi-fw pi-globe", to: "/landing" },
             { label: "Login", icon: "pi pi-fw pi-sign-in", to: "/login" },
+            {
+              label: "Register",
+              icon: "pi pi-fw pi-user-plus",
+              to: "/register",
+            },
             { label: "Error", icon: "pi pi-fw pi-times-circle", to: "/error" },
             {
               label: "Not Found",
